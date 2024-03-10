@@ -36,16 +36,11 @@ video {
 .glowing-text {
     color: #FFFFFF; /* White text */
     text-shadow:
-            0 0 5px #3FFFD8, /* Turquoise glow */
-            0 0 10px #3FFFD8, /* Turquoise glow */
-            0 0 15px #3FFFD8, /* Turquoise glow */
-            0 0 20px #3FFFD8, /* Turquoise glow */
-            0 0 35px #3FFFD8, /* Turquoise glow */
-            0 0 40px #3FFFD8; /* Turquoise glow */
-            /*0 0 50px #3FFFD8, !* Turquoise glow *!*/
-            /*0 0 75px #3FFFD8; !* Turquoise glow *!*/
+            0 0 8px #E6E6FA, /* Lavender glow */
+            0 0 15px #E6E6FA, /* Lavender glow */
+            0 0 20px #E6E6FA, /* Lavender glow */
+            0 0 25px #B19CD9; /* Soft purple glow */
     font-size: 2em;
-
     position: absolute; /* Changed from relative to absolute */
     bottom: 20%; /* 20% from the bottom */
     left: 50%; /* Center the text horizontally */
