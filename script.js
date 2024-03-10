@@ -44,6 +44,8 @@ function playMedia() {
         } while (randomVideoIndex === lastVideoIndex);
         lastVideoIndex = randomVideoIndex;
 
+    resetFadeInAnimation();
+
     const { text, audioSrc } = mediaSequence[randomMediaIndex]; // Use random media sequence
     const videoSrc = videoSources[randomVideoIndex]; // Use random video source
 
@@ -78,3 +80,12 @@ document.getElementById('playButton').addEventListener('click', function() {
     }
     playMedia(); // Start the media sequence without the index parameter
 });
+
+function resetFadeInAnimation() {
+    const videoPlayer = document.getElementById('videoPlayer');
+    videoPlayer.style.animation = 'none';
+    // Trigger reflow to reset the animation
+    videoPlayer.offsetHeight;
+    videoPlayer.style.animation = '';
+}
+
