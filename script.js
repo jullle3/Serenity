@@ -28,6 +28,12 @@ document.getElementById('playButton').addEventListener('click', function() {
     this.style.display = 'none'; // Hide the play button
     document.getElementById('videoPlayer').style.display = 'block';
     document.getElementById('textOverlay').style.display = 'block';
+
+    // Stop and hide the background video
+    const backgroundVideo = document.getElementById('backgroundVideo');
+    backgroundVideo.pause();
+    backgroundVideo.style.display = 'none';
+
     playMedia(0); // Assuming playMedia is already defined as per previous instructions
 });
 
