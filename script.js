@@ -5,6 +5,8 @@ const mediaSequence = [
     { videoSrc: "videos/sunrise.mp4", text: "Your monitoring is perfect, all bugs are caught by your team and not by your users", audioSrc: "audio/monitoring-perfect.wav" },
     { videoSrc: "videos/sunrise.mp4", text: "Management knows exactly what you're doing, and you will be rewarded generously for your great work", audioSrc: "audio/management-generous.wav" },
     { videoSrc: "videos/sunrise.mp4", text: "You deliver great value and always work on meaningful projects. You are exceptionally motivated", audioSrc: "audio/great-value.wav" },
+    { videoSrc: "videos/sunrise.mp4", text: "You are not just solving problems; you are crafting the future. One line of code at a time", audioSrc: "audio/not-just-solving-problems.wav" },
+    { videoSrc: "videos/sunrise.mp4", text: "Where others see a code maze, you see a puzzle awaiting solution, your optimism turning challenges into triumphs.", audioSrc: "audio/code-maze-2-triumph.wav" },
 ];
 
 const videoSources = [
