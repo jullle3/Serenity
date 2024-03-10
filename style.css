@@ -41,9 +41,9 @@ video {
             0 0 15px #3FFFD8, /* Turquoise glow */
             0 0 20px #3FFFD8, /* Turquoise glow */
             0 0 35px #3FFFD8, /* Turquoise glow */
-            0 0 40px #3FFFD8, /* Turquoise glow */
-            0 0 50px #3FFFD8, /* Turquoise glow */
-            0 0 75px #3FFFD8; /* Turquoise glow */
+            0 0 40px #3FFFD8; /* Turquoise glow */
+            /*0 0 50px #3FFFD8, !* Turquoise glow *!*/
+            /*0 0 75px #3FFFD8; !* Turquoise glow *!*/
     font-size: 2em;
 
     position: absolute; /* Changed from relative to absolute */
@@ -75,4 +75,12 @@ video {
 
 #videoPlayer {
     animation: fadeIn 3s ease-out forwards;
+}
+
+
+@media (max-width: 768px) {
+    #video-text, .glowing-text {
+        font-size: 1em; /* Smaller text for mobile devices */
+        bottom: 10%; /* Adjust position to be more visible */
+    }
 }
