@@ -1,10 +1,9 @@
 Voice:
 Your database queries are always fast and efficient and ALWAYS supported by an index
 You love, when coworkers nitpick on merge requests, even the smallest suggestions are appreciated by you
-You deliver great value
 Your monitoring is perfect, all bugs are caught by your team and not by your users
 Management knows exactly what you're doing, and you will be rewarded generously for your great work
-
+You deliver great value and always work on meaningful projects. You are exceptionally motivated
 
 Videos:
 A sunrise over a peaceful lake, reflecting the warm colors of the morning.

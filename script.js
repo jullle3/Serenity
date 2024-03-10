@@ -4,6 +4,7 @@ const mediaSequence = [
     { videoSrc: "videos/sunrise.mp4", text: "You love when coworkers nitpick on merge requests, even the smallest suggestions are appreciated by you", audioSrc: "audio/nitpick-merge-requests.wav" },
     { videoSrc: "videos/sunrise.mp4", text: "Your monitoring is perfect, all bugs are caught by your team and not by your users", audioSrc: "audio/monitoring-perfect.wav" },
     { videoSrc: "videos/sunrise.mp4", text: "Management knows exactly what you're doing, and you will be rewarded generously for your great work", audioSrc: "audio/management-generous.wav" },
+    { videoSrc: "videos/sunrise.mp4", text: "You deliver great value and always work on meaningful projects. You are exceptionally motivated", audioSrc: "audio/great-value.wav" },
 ];
 
 const videoSources = [
