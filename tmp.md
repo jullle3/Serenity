@@ -15,7 +15,16 @@ That postmortem you did was worth it.
 Your friends and family appreciate your humorous work stories.
 That joke you told in your meeting was funny. If your coworkers were not on mute, you would have heard them laughing.
 
+Your coworkers love your sneaky and manual fixes, applied directly to production
+Your tests are cleverly written and rarely ever breaks
+Your logs are reliable and well organized
 
+Fra Bo:
+“You are an appreciated employee. The company could never replace you”
+“Your contribution to the project WAS crucial!”
+“Your test coverage is perfect.”
+“StackOverflow is only used for inspiration - never copy and paste”
+“You would never uncritically copy code from the internet”
 
 ChatGPT forslag
 "Your code reviews are always insightful, making every commit a step towards excellence."
