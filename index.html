@@ -4,51 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video Landing Page</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-        }
-        .video-container {
-            position: fixed;
-            right: 0;
-            bottom: 0;
-            min-width: 100%;
-            min-height: 100%;
-        }
-        video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <div class="video-container">
     <video id="video-background" autoplay muted loop>
-        <source src="path-to-your-first-video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
+        <!-- Videos will be loaded by JavaScript -->
     </video>
+    <div id="video-text" class="glowing-text">Welcome Message</div>
 </div>
-
-<script>
-    const videos = [
-        "videos/sunrise.mp4",
-        // Add more video paths as needed
-    ];
-
-    let currentVideo = 0;
-
-    const videoElement = document.getElementById('video-background');
-
-    videoElement.onended = () => {
-        currentVideo = (currentVideo + 1) % videos.length;
-        videoElement.src = videos[currentVideo];
-        videoElement.play();
-    };
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
