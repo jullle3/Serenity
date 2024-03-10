@@ -2,6 +2,7 @@ const mediaSequence = [
     { videoSrc: "videos/sunrise.mp4", text: "Your database queries are always fast and efficient and always supported by an index", audioSrc: "audio/database-queries-fast.wav" },
     { videoSrc: "videos/sunrise.mp4", text: "You are happy", audioSrc: "audio/you-are-happy.wav" },
     { videoSrc: "videos/sunrise.mp4", text: "You love, when coworkers nitpick on merge requests, even the smallest suggestions are appreciated by you", audioSrc: "audio/nitpick-merge-requests.wav" },
+    { videoSrc: "videos/sunrise.mp4", text: "Your monitoring is perfect, all bugs are caught by your team and not by your users", audioSrc: "audio/monitoring-perfect.wav" },
 ];
 
 document.getElementById('playButton').addEventListener('click', function() {
