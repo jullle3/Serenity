@@ -54,3 +54,15 @@ video {
     text-align: center;
     z-index: 2; /* Above the video layer */
 }
+
+
+#playButton {
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+}

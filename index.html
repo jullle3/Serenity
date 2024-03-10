@@ -9,11 +9,14 @@
 <body>
 
 
+<button id="playButton">Experience the Journey</button>
+
+<audio id="backgroundMusic" src="audio/dreamy.mp3" loop></audio>
+
 <div class="video-container">
-    <video id="video-background" autoplay muted loop>
-        <!-- Videos will be loaded by JavaScript -->
-    </video>
-    <div id="video-text" class="glowing-text">Welcome Message</div>
+    <video id="videoPlayer" width="750" controls muted style="display:none;"></video>
+    <div id="textOverlay" class="glowing-text" style="display:none;">Initial Text</div>
+    <audio id="audioPlayer" style="display:none;"></audio>
 </div>
 
 
