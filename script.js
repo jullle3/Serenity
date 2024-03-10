@@ -3,6 +3,19 @@ const mediaSequence = [
     { videoSrc: "videos/sunrise.mp4", text: "You are happy", audioSrc: "audio/you-are-happy.wav" },
     { videoSrc: "videos/sunrise.mp4", text: "You love, when coworkers nitpick on merge requests, even the smallest suggestions are appreciated by you", audioSrc: "audio/nitpick-merge-requests.wav" },
     { videoSrc: "videos/sunrise.mp4", text: "Your monitoring is perfect, all bugs are caught by your team and not by your users", audioSrc: "audio/monitoring-perfect.wav" },
+    { videoSrc: "videos/sunrise.mp4", text: "Management knows exactly what you're doing, and you will be rewarded generously for your great work ", audioSrc: "audio/management-generous.wav" },
+];
+
+const videoSources = [
+    "videos/sunrise.mp4",
+    "videos/flowers.mp4",
+    "videos/grassy-nature.mp4",
+    "videos/fog-water.mp4",
+    "videos/happy-woman-nature.mp4",
+    "videos/playful-puppy.mp4",
+    "videos/wild-horses.mp4",
+    "videos/women-beach.mp4",
+    "videos/yoga.mp4"
 ];
 
 document.getElementById('playButton').addEventListener('click', function() {
@@ -12,28 +25,27 @@ document.getElementById('playButton').addEventListener('click', function() {
     playMedia(0); // Assuming playMedia is already defined as per previous instructions
 });
 
-let currentIndex = 0;
+let lastMediaIndex = null;
+let lastVideoIndex = null;
 
-function playMedia(index) {
-    const videoSources = [
-        "videos/sunrise.mp4",
-        "videos/flowers.mp4",
-        "videos/grassy-nature.mp4",
-        "videos/fog-water.mp4",
-        "videos/happy-woman-nature.mp4",
-        "videos/playful-puppy.mp4",
-        "videos/wild-horses.mp4",
-        "videos/women-beach.mp4",
-        "videos/yoga.mp4"
-    ];
-    const randomIndex = Math.floor(Math.random() * videoSources.length); // Randomly pick 0 or 1
+function playMedia() {
+    let randomMediaIndex;
+    let randomVideoIndex;
 
-    if(index >= mediaSequence.length) {
-        index = 0; // Reset index for looping
-    }
+    // Ensure we pick a different media index if more than one option exists
+    do {
+            randomMediaIndex = Math.floor(Math.random() * mediaSequence.length);
+        } while (randomMediaIndex === lastMediaIndex);
+        lastMediaIndex = randomMediaIndex;
 
-    const videoSrc = videoSources[randomIndex]; // Use random video source
-    const { text, audioSrc } = mediaSequence[index]; // Keep text and audio sequence as is
+    // Ensure we pick a different video index if more than one option exists
+    do {
+            randomVideoIndex = Math.floor(Math.random() * videoSources.length);
+        } while (randomVideoIndex === lastVideoIndex);
+        lastVideoIndex = randomVideoIndex;
+
+    const { text, audioSrc } = mediaSequence[randomMediaIndex]; // Use random media sequence
+    const videoSrc = videoSources[randomVideoIndex]; // Use random video source
 
     const videoPlayer = document.getElementById('videoPlayer');
     const audioPlayer = document.getElementById('audioPlayer');
@@ -50,14 +62,12 @@ function playMedia(index) {
     audioPlayer.oncanplaythrough = () => audioPlayer.play();
     audioPlayer.onended = () => {
         setTimeout(() => {
-            currentIndex = (index + 1) % mediaSequence.length; // Ensure the sequence loops
-            playMedia(currentIndex);
-        }, 4000); // Wait for 2 seconds after audio ends
+            playMedia(); // Call playMedia again to pick new random media
+        }, 4000);
     };
 }
 
-
-
+// Adjust the initial playMedia(0) call inside your click event listener:
 document.getElementById('playButton').addEventListener('click', function() {
     this.style.display = 'none'; // Hide the play button
     document.getElementById('videoPlayer').style.display = 'block';
@@ -66,5 +76,5 @@ document.getElementById('playButton').addEventListener('click', function() {
     if (backgroundMusic) {
         backgroundMusic.play(); // Play the background music
     }
-    playMedia(0); // Start the main media sequence
+    playMedia(); // Start the media sequence without the index parameter
 });
